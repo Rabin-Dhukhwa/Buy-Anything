@@ -1,17 +1,20 @@
 * {
   box-sizing: border-box;
   color: #185a4a;
+  margin: 0;
+  padding: 0;
+  /* text-decoration: none; */
+  /* line-height: 1.5; */
+  /* font-family: sans-serif; */
 }
 
 body {
-  margin: 0;
-  padding: 0;
 }
 
 .container {
   display: grid;
   gap: 15px;
-  background: gray;
+  background: #ffffff;
 
   grid-template-areas:
     "nav-main nav-main nav-main nav-main nav-main"
@@ -118,16 +121,27 @@ body {
   color: black;
 }
 
-/* =========== */
+/* =========== side-box1*/
 .side-box1 {
-  background: green;
+  /* background: rgb(199, 190, 190); */
   grid-area: side-box1;
-  height: 250px;
+  /* min-height: auto; */
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
 }
+.side-box1 > div {
+  margin-bottom: 15px;
+  margin-left: 20px;
+}
+.side-box1 > div h3 {
+  margin-bottom: 8px;
+}
+
 .side-box2 {
   background: rgb(50, 171, 192);
   grid-area: side-box2;
-  height: 250px;
+  min-height: 500px;
 }
 .main {
   background: rgb(247, 247, 242);
