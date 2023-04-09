@@ -1,6 +1,7 @@
 * {
   box-sizing: border-box;
-  color: #185a4a;
+  /* color: #185a4a; */
+  color: black;
   margin: 0;
   padding: 0;
   /* text-decoration: none; */
@@ -22,6 +23,7 @@ body {
     "side-box2 main main main main"
     "footer footer footer footer footer";
   grid-template-columns: 1fr 4fr;
+  /* grid-template-rows: auto 1fr 2fr auto; */
 }
 /* ======nav-main-top */
 .nav-main {
@@ -34,7 +36,8 @@ body {
   display: flex;
   justify-content: space-between;
   background: #ffffff;
-  color: #185a4a;
+  /* color: #185a4a; */
+  color: black;
 }
 .logo-img {
   height: 50px;
@@ -48,12 +51,13 @@ body {
   display: flex;
   align-items: center;
 
-  border: 2px solid #185a4a;
+  /* border: 2px solid #185a4a; */
+  border: 2px solid black;
   /* justify-content: center; */
   border-radius: 10px;
 }
 .search-bar form {
-  min-width: 1000px;
+  min-width: 800px;
   height: 50px;
   display: flex;
   background: white;
@@ -74,6 +78,7 @@ body {
   border: none;
   /* color: #ffffff; */
   border-radius: 0 8px 8px 0;
+  cursor: pointer;
 }
 .returns-orders {
   display: flex;
@@ -118,7 +123,7 @@ body {
   transform: none; */
 }
 .nav-bar nav a:active {
-  color: black;
+  color: tomato;
 }
 
 /* =========== side-box*/
@@ -163,7 +168,7 @@ body {
     "main-item9 main-item10 main-item11 main-item12"
     "main-item13 main-item14 main-item15 main-item16"
     "main-item17 main-item18 main-item19 main-item20";
-  gap: 20px;
+  gap: 100px;
   grid-template-columns: 1fr 1fr 1fr 1fr;
   grid-template-rows: 1fr 1fr 1fr 1fr;
 }
@@ -259,9 +264,37 @@ body {
   grid-area: main-item20;
   min-height: 300px;
 }
+/* ===========footer */
 .footer {
-  background: black;
-  color: white;
+  background-color: #232f3e;
+  /* color: white; */
   grid-area: footer;
-  min-height: 200px;
+  min-height: 130px;
+  display: flex;
+  flex-direction: column;
+  /* justify-content: flex-start; */
+  align-items: center;
+}
+.footer > div {
+  margin-bottom: 50px;
+}
+.footer .back-to-top {
+  background-color: #37475a;
+  width: 100%;
+  text-align: center;
+  padding: 20px 0;
+  color: white;
+  cursor: pointer;
+}
+.footer-nav-bar nav a {
+  padding: 40px;
+  color: white;
+  text-decoration: none;
+  font-weight: bold;
+}
+.copyright {
+  display: flex;
+}
+.copyright h5 {
+  color: white;
 }
