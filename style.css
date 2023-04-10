@@ -35,9 +35,8 @@ body {
 .nav-main-top {
   display: flex;
   justify-content: space-between;
-  background: #ffffff;
-  /* color: #185a4a; */
-  color: black;
+  /* background: #ffffff; */
+  /* color: rgb(199, 39, 39); */
 }
 .logo-img {
   height: 50px;
@@ -47,9 +46,9 @@ body {
   display: flex;
   align-items: center;
 }
+
 .search-bar {
   display: flex;
-  align-items: center;
 
   /* border: 2px solid #185a4a; */
   border: 2px solid black;
@@ -58,7 +57,7 @@ body {
 }
 .search-bar form {
   min-width: 800px;
-  height: 50px;
+  min-height: 50px;
   display: flex;
   background: white;
   border-radius: 10px;
@@ -76,7 +75,7 @@ body {
   background: tomato;
   padding: 0 40px;
   border: none;
-  /* color: #ffffff; */
+  color: #ffffff;
   border-radius: 0 8px 8px 0;
   cursor: pointer;
 }
@@ -88,7 +87,7 @@ body {
 .button {
   background: #ffffff;
   border: none;
-  color: #185a4a;
+  /* color: #185a4a; */
 }
 /* ==========nav-main-bottom */
 .nav-main-bottom {
@@ -169,8 +168,8 @@ body {
     "main-item13 main-item14 main-item15 main-item16"
     "main-item17 main-item18 main-item19 main-item20";
   gap: 100px;
-  grid-template-columns: 1fr 1fr 1fr 1fr;
-  grid-template-rows: 1fr 1fr 1fr 1fr;
+  /* grid-template-columns: 1fr 1fr 1fr 1fr; */
+  /* grid-template-rows: 1fr 1fr 1fr 1fr; */
 }
 .main > div {
   display: flex;
@@ -186,11 +185,37 @@ body {
   min-height: 300px;
   /* display: flex; */
   /* flex-direction: column; */
+  position: relative;
+  /* border: 2px solid; */
+}
+/* by default any pseudo element is inline element */
+.main-item1::after {
+  content: "On sale";
+  background-color: tomato;
+  font-size: 16px;
+  display: inline-block; /*to set padding top because pseudo element is inline by default*/
+  padding: 5px 10px;
+  position: absolute;
+  top: -10px;
+  left: -25px;
+  border-radius: 15px 0px 15px 0px;
 }
 
 .main-item2 {
   grid-area: main-item2;
   min-height: 300px;
+  position: relative;
+}
+.main-item2::after {
+  content: "50% off";
+  background-color: tomato;
+  font-size: 16px;
+  display: inline-block; /*to set padding top because pseudo element is inline by default*/
+  padding: 5px 10px;
+  position: absolute;
+  top: -10px;
+  left: -25px;
+  border-radius: 15px 0px 15px 0px;
 }
 .main-item3 {
   grid-area: main-item3;
@@ -297,4 +322,202 @@ body {
 }
 .copyright h5 {
   color: white;
+}
+
+/* ===========@media query */
+@media (max-width: 1300px) {
+  .search-bar form {
+    min-width: 500px;
+    min-height: 50px;
+    display: flex;
+    background: white;
+    border-radius: 10px;
+  }
+}
+
+@media (max-width: 950px) {
+  .search-bar form {
+    min-width: 350px;
+    min-height: 50px;
+    display: flex;
+    background: white;
+    border-radius: 10px;
+  }
+  .main {
+    /* background: rgb(247, 247, 242); */
+    grid-area: main;
+    /* min-height: 1200px; */
+    display: grid;
+    grid-template-areas:
+      "main-item1 main-item2 main-item3 "
+      "main-item4 main-item5 main-item6 "
+      "main-item7 main-item8 main-item9"
+      "main-item10 main-item11 main-item12"
+      "main-item13 main-item14 main-item15 "
+      "main-item16 main-item17 main-item18 "
+      "main-item19  main-item20 0";
+    gap: 100px;
+    grid-template-columns: 1fr 1fr 1fr;
+    /* grid-template-rows: 1fr 1fr 1fr 1fr; */
+  }
+}
+
+@media (max-width: 800px) {
+  .search-bar form {
+    min-width: 200px;
+    min-height: 50px;
+    display: flex;
+    background: white;
+    border-radius: 10px;
+  }
+  .main {
+    /* background: rgb(247, 247, 242); */
+    grid-area: main;
+    /* min-height: 1200px; */
+    display: grid;
+    grid-template-areas:
+      "main-item1 main-item2"
+      "main-item3 main-item4"
+      "main-item5 main-item6 "
+      "main-item7 main-item8"
+      "main-item9 main-item10"
+      "main-item11 main-item12"
+      "main-item13 main-item14 "
+      "main-item15 main-item16"
+      "main-item17 main-item18 "
+      "main-item19  main-item20 ";
+    gap: 100px;
+    grid-template-columns: 1fr 1fr;
+  }
+  .search-bar form button {
+    background: tomato;
+    padding: 0 10px;
+    border: none;
+    color: #ffffff;
+    border-radius: 0 8px 8px 0;
+    cursor: pointer;
+  }
+  .location {
+    display: none;
+  }
+  .nav-bar nav a:link {
+    text-decoration: none;
+    /* color: #185a4a; */
+    margin-right: 30px;
+    font-weight: bold;
+  }
+}
+
+@media (max-width: 650px) {
+  .search-bar form {
+    min-width: 200px;
+    min-height: 50px;
+    display: flex;
+    background: white;
+    border-radius: 10px;
+  }
+  .location {
+    display: none;
+  }
+  .returns-orders {
+    display: none;
+  }
+  .main {
+    /* background: rgb(247, 247, 242); */
+    grid-area: main;
+    /* min-height: 1200px; */
+    display: grid;
+    grid-template-areas:
+      "main-item1 main-item2"
+      "main-item3 main-item4"
+      "main-item5 main-item6 "
+      "main-item7 main-item8"
+      "main-item9 main-item10"
+      "main-item11 main-item12"
+      "main-item13 main-item14 "
+      "main-item15 main-item16"
+      "main-item17 main-item18 "
+      "main-item19  main-item20 ";
+    gap: 100px;
+    grid-template-columns: 1fr 1fr;
+  }
+  .search-bar form button {
+    background: tomato;
+    padding: 0 10px;
+    border: none;
+    color: #ffffff;
+    border-radius: 0 8px 8px 0;
+    cursor: pointer;
+  }
+  .nav-bar nav a:link {
+    text-decoration: none;
+    /* color: #185a4a; */
+    margin-right: 10px;
+    font-weight: bold;
+    font-size: medium;
+  }
+}
+
+@media (max-width: 500px) {
+  .search-bar form {
+    min-width: 200px;
+    min-height: 50px;
+    display: flex;
+    background: white;
+    border-radius: 10px;
+  }
+  .location {
+    display: none;
+  }
+  .returns-orders {
+    display: none;
+  }
+  .cart {
+    display: none;
+  }
+  .main {
+    /* background: rgb(247, 247, 242); */
+    grid-area: main;
+    /* min-height: 1200px; */
+    display: grid;
+    grid-template-areas:
+      "main-item1 "
+      "main-item2"
+      "main-item3"
+      "main-item4"
+      "main-item5"
+      " main-item6 "
+      "main-item7"
+      " main-item8"
+      "main-item9 "
+      "main-item10"
+      "main-item11"
+      " main-item12"
+      "main-item13"
+      " main-item14 "
+      "main-item15"
+      " main-item16"
+      "main-item17"
+      " main-item18 "
+      "main-item19"
+      "  main-item20 ";
+    gap: 100px;
+    grid-template-columns: 1fr;
+    margin: 0 30px 0 30px;
+  }
+  .search-bar form button {
+    background: tomato;
+    padding: 0 10px;
+    border: none;
+    color: #ffffff;
+    border-radius: 0 8px 8px 0;
+    cursor: pointer;
+  }
+  .nav-bar nav a:link {
+    text-decoration: none;
+    /* color: #185a4a; */
+    margin-right: 10px;
+    font-weight: bold;
+    font-size: medium;
+  }
 }
