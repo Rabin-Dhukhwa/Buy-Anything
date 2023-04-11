@@ -160,6 +160,37 @@ button {
 fieldset {
   border: none;
 }
+.color{
+  background-color: #000;
+  height: 20px;
+  width: 22px;
+  display: flex;
+  /* flex-direction: row; */
+  justify-content: space-around;
+  /* margin: 20px; */
+  margin-right: 1px;
+  display: inline-block;
+}
+.color-blue{
+  background-color: blue;
+ 
+}
+.color-red{
+  background-color:red;
+ 
+}
+.color-yellow{
+  background-color:yellow;
+ 
+}
+.color-green      {
+  background-color: green;
+  
+}
+.color-brown{
+  background-color:brown;
+
+}
 
 /* ==============main */
 .main {
@@ -197,7 +228,7 @@ fieldset {
 }
 /* by default any pseudo element is inline element */
 .main-item1::after {
-  content: "On Sale";
+  content: "ON SALE";
   background-color: tomato;
   font-size: 16px;
   display: inline-block; /*to set padding top because pseudo element is inline by default*/
@@ -206,6 +237,8 @@ fieldset {
   top: -10px;
   left: -14px;
   border-radius: 5px 5px 30px 5px;
+  letter-spacing: 2px;
+  color: #f7f7f2;
 }
 
 .main-item2 {
@@ -223,6 +256,9 @@ fieldset {
   top: -10px;
   left: -14px;
   border-radius: 5px 5px 30px 5px;
+  letter-spacing: 2px;
+  color: #f7f7f2;
+}
 }
 .main-item3 {
   grid-area: main-item3;
