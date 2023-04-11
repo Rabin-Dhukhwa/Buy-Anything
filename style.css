@@ -498,6 +498,9 @@ fieldset {
   .nav-main-top {
     justify-content: space-around;
   }
+  .nav-main-top .logo {
+    display: none;
+  }
   .search-bar form {
     /* width: 30%; */
     min-height: 50px;
