@@ -539,6 +539,7 @@ fieldset {
   }
   .search-bar form {
     /* width: 30%; */
+    min-width: 270px;
     min-height: 50px;
     display: flex;
     background: white;
